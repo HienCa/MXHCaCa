@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="InfomationDetial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Facebook</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__left">
+            <i class="fab fa-facebook icon icon--blue"></i>
+            <span class="groupSearch">
+
+                <input type="text" class="search" placeholder="Tìm kiếm trên Facebook">
+            </span>
+        </div>
+        <div class="header__center ">
+            <a href="index.html" class="header__center__home ">
+                <i class="fas fa-home-lg-alt icon icon--bg icon--blue hover"></i>
+            </a>
+            <a href="Friends.html" class="header__center__home">
+                <i class="fas fa-user-friends icon icon--bg  hover"></i>
+            </a>
+            <a href="Watch.html" class="header__center__home">
+                <i class="fas fa-play icon icon--bg  hover"></i>
+            </a>
+            <a href="" class="header__center__home">
+                <i class="fas fa-store icon icon--bg  hover"></i>
+            </a>
+            <a href="" class="header__center__home">
+                <i class="fas fa-users icon icon--bg  hover"></i>
+            </a>
+        </div>
+        <div class="header__right">
+            <span class="">
+                <i class="fas fa-th-list icon icon--p hover"></i>
+            </span>
+            <span id="messenger" onclick="ToggleMess()" class="messenger">
+                <i class="fab fa-facebook-messenger icon icon--p hover"></i>
+
+            </span>
+            <span id="notification" onclick="ToggleNoti()" class="notification">
+                <i class="fas fa-bell icon icon--p hover"></i>
+            </span>
+            <span class="">
+                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+            </span>
+        </div>
+        <div id="messengerBox" class="messengerList hide">
+            <div class="messengerList__head ">
+                <h2>Chat</h2>
+                <div class="groupBtn">
+                    <i class="fas fa-ellipsis-h icon--md icon-w icon--hover"></i>
+                    <i class="fas fa-expand-arrows-alt icon--md icon-w icon--hover"></i>
+                    <i class="fas fa-video icon--md icon-w icon--hover"></i>
+                </div>
+            </div>
+            <div class="groupSearch mg-top-10">
+                <input type="text" class="search " placeholder="Tìm kiếm trên Messenger">
+            </div>
+            <div class="statusPersonal__item mg-top-10">
+                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                <div class="groupName">
+                    <span class="groupName__item__name icon--red">
+                        Cưới Vợ Giàu Group </span>
+                    <div class="groupName_item__time">
+                        <span class="name icon--blue">Hien:</span>
+                        <span class="mg-left-10px text-light">Haizz mệt mỏi quá đi...</span>
+                    </div>
+
+                </div>
+                <i class="fas fa-bell-slash icon-w iconAbsoluteActiveMess icon--md icon--gray"></i>
+            </div>
+
+            <div class="statusPersonal__item mg-top-10">
+                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                <div class="groupName">
+                    <span class="groupName__item__name text--light">
+                        Văn Hiền </span>
+                    <div class="groupName_item__time">
+                        <span class="name icon--blue">Văn Hiền:</span>
+                        <span class="mg-left-10px text-light">Haizz mệt mỏi quá đi...</span>
+                    </div>
+
+                </div>
+                <i class="fas fa-bell-slash icon-w iconAbsoluteActiveMess icon--md icon--gray"></i>
+            </div>
+
+            <div class="statusPersonal__item mg-top-10">
+                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                <div class="groupName">
+                    <span class="groupName__item__name text--light">
+                        Mụi Mụi </span>
+                    <div class="groupName_item__time">
+                        <span class="name icon--blue">Tôi:</span>
+                        <span class="mg-left-10px text-light">HaHa</span>
+                    </div>
+
+                </div>
+                <i class="far fa-check-circle icon-w iconAbsoluteActiveMess icon--md icon--gray"></i>
+            </div>
+
+            <div class="statusPersonal__item mg-top-10">
+                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                <div class="groupName">
+                    <span class="groupName__item__name text--light">
+                        Đệ Đệ </span>
+                    <div class="groupName_item__time">
+                        <span class="name icon--blue">Tôi:</span>
+                        <span class="mg-left-10px text-light">Tôi đang nghiêm túc đấy</span>
+                    </div>
+
+                </div>
+                <i class="fas fa-check-circle icon-w iconAbsoluteActiveMess icon--md icon--gray"></i>
+            </div>
+
+
+        </div>
+        <div id="notificationBox" class="messengerList hide">
+            <div class="messengerList__head">
+                <h2>Thông báo</h2>
+                <div class="groupBtn">
+                    <i class="fas fa-video icon--md icon-w icon--hover"></i>
+                </div>
+            </div>
+            <div class="messengerList__head__show mg-top-10">
+                <span class="messengerList__head__show__item btn__sub--active icon--hover">Tất cả</span>
+                <span class="messengerList__head__show__item icon--hover">Chưa đọc</span>
+            </div>
+
+            <div class="messengerList__head__history mg-top-10">
+                <span class="messengerList__head__history__item icon--hover">Trước đó</span>
+                <span class="messengerList__head__history__item icon--blue icon--hover">Xem tất cả</span>
+            </div>
+
+            <div class="groupSearch mg-top-10 ">
+                <input type="text" class="search w-100" placeholder="Tìm kiếm trên Messenger">
+            </div>
+            <div class="statusPersonal__item GroupRelative mg-top-10">
+                <span class="GroupRelative">
+                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover ">
+                    <i class="fas fa-laugh-squint icon-w iconAbsolute icon--yellow icon--md"></i>
+                </span>
+                <div class="groupName mg-left-10">
+                    <span class="groupName__item__name text--light">
+                        <span class="text--weight">Hot Girl</span> đã bày tỏ cảm xúc về một video: No Cap.
+                    </span>
+                    <div class="groupName_item__time">
+                        <span class="mg-left-10px text-light icon--blue">1h trước</span>
+                    </div>
+                </div>
+                <i class="fas fa-circle icon-w iconActiveAbsolute"></i>
+            </div>
+            <div class="statusPersonal__item GroupRelative mg-top-10">
+                <span class="GroupRelative">
+                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover ">
+                    <i class="fas fa-birthday-cake icon-w iconAbsolute icon--pink"></i>
+                </span>
+                <div class="groupName">
+                    <span class="groupName__item__name text--light">
+                        Sinh nhật của <span class="text--weight">Hot Girl</span> vào 01 tháng 01
+                    </span>
+                    <div class="groupName_item__time">
+                        <span class="mg-left-10px text-light icon--blue">6h trước</span>
+                    </div>
+                </div>
+                <i class="fas fa-circle icon-w iconActiveAbsolute"></i>
+            </div>
+            <div class="statusPersonal__item GroupRelative mg-top-10">
+                <span class="GroupRelative">
+                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover ">
+                    <i class="fas fa-user-plus icon-w iconAbsoluteAdd icon--blue"></i>
+                </span>
+                <div class="groupName">
+                    <span class="groupName__item__name text--light">
+                        <span class="text--weight">Tiểu Bạch</span> đã gửi lời mời kết bạn
+                    </span>
+                    <div class="groupName_item__time">
+                        <span class="mg-left-10px text-light icon--blue">4 tuần trước</span>
+                    </div>
+                    <div class="d-flex mg-top-10">
+                        <button class="btn--accept">Xác nhận</button>
+                        <button class="btn--delete mg-left-10">Xóa</button>
+                    </div>
+                </div>
+
+                <i class="fas fa-circle icon-w iconActiveAbsolute"></i>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="App">
+
+        <div class="App__head">
+            <div class="App__head__img GroupRelative">
+                <img src="images/3boys.jpg" alt="PersonalPicture" class="personalAvatar__Main">
+                <span class="btnUpdateAbsolute hover">
+                    <i class="fas fa-camera"></i> Chỉnh sửa ảnh bìa
+                </span>
+            </div>
+            <div class="App__head__update">
+                <div class="App__head__update__item">
+                    <div class="groupPersonal">
+                        <span class="personalAvatar GroupRelative">
+                            <img src="images/nvhh.jpg" alt="" class="  icon--hover">
+                            <span class="iconAbsolutee">
+                                <i class="fas fa-camera  icon"></i>
+                            </span>
+                        </span>
+                        <div class="groupPersonal__item">
+                            <div class="text-large ">Văn Hiền</div>
+                            <div class="group__friendInfo mg-top-10">
+                                <span class="quantity">67</span> bạn bè
+                            </div>
+                            <div class="group__friendAvatar mg-top-10 GroupRelative">
+                                <img src="images/lenguyenanhdung.jpg" alt="" class="avatar-icon icon--hover">
+                                <img src="images/pha.jpg" alt="" class="avatar-icon icon--hover ">
+                                <img src="images/phanthanhhai.jpg" alt="" class="avatar-icon icon--hover ">
+                                <img src="images/tranbaminh.jpg" alt="" class="avatar-icon icon--hover ">
+                                <img src="images/ntb.jpg" alt="" class="avatar-icon icon--hover ">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="App__head__update__item">
+                    <span class="btn-addStory icon--hover">
+                        <i class="fas fa-plus-circle "></i> Thêm vào tin
+                    </span>
+                    <span class="btn-updatePersonalPage icon--hover mg-left-10">
+                        <i class="fas fa-pen"></i> Chỉnh sửa trang cá nhân
+                    </span>
+                </div>
+            </div>
+
+            <div class="App__head__groupBtn mg-top-10">
+                <span class="btn__item btn-active">Bài viết</span>
+                <span class="btn__item mg-left-10">Giới Thiệu</span>
+                <span class="btn__item mg-left-10">Bạn bè</span>
+                <span class="btn__item mg-left-10">Ảnh</span>
+                <span class="btn__item mg-left-10">Video</span>
+                <span class="btn__item mg-left-10">Check in</span>
+                <span class="btn__item mg-left-10">Xem Thêm <i class="fas fa-caret-down"></i></span>
+            </div>
+        </div>
+
+        <div class="App__content__main">
+            <div class="App__content">
+                <div class="App__content__left">
+                    <div class="Introduction">
+                        <h2>Giới thiệu</h2>
+                        <div class="Introduction__btn mg-top-10">Thêm tiểu sử</div>
+                        <div class="Introduction__btn mg-top-10">Chỉnh sửa chi tiết</div>
+                        <div class="Introduction__btn mg-top-10">Thêm sở thích</div>
+                        <div class="Introduction__btn mg-top-10">Thêm nội dung đáng chú ý</div>
+                    </div>
+                    <div class="ImageList mg-top-10">
+                        <div class="ImageList__head">
+                            <h2>Ảnh</h2>
+                            <span class="viewAll icon--blue">Xem tất cả</span>
+                        </div>
+                        <div class="ImageList__body mg-top-10">
+                            <img src="images/s.jfif" alt="" class="ImageList__body__item icon--hover">
+                            <img src="images/aa.jfif" alt="" class="ImageList__body__item icon--hover">
+                            <img src="images/pppp.jfif" alt="" class="ImageList__body__item icon--hover">
+                            <img src="images/ssssssssss.jfif" alt="" class="ImageList__body__item icon--hover">
+                            <img src="images/ppppppp.jfif" alt="" class="ImageList__body__item icon--hover">
+                            <img src="images/p.jfif" alt="" class="ImageList__body__item icon--hover">
+
+                        </div>
+                    </div>
+                    <div class="Friends mg-top-10">
+                        <div class="Friend__head">
+                            <h2>Bạn bè</h2>
+                            <span class="viewAlL icon--blue">Xem tất cả bạn bè</span>
+                        </div>
+                        <div class="mg-top-10">
+                            <span class="quantity">67</span>
+                            người bạn
+                        </div>
+                        <div class="Friend__body">
+                            <div class="Friend__body__item">
+                                <img src="images/lenguyenanhdung.jpg" alt=""
+                                    class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Nguyễn Văn A</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/lhnd.jpg" alt="" class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Nguyễn Văn B</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/ntb.jpg" alt="" class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Nguyễn Văn C</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/pha.jpg" alt="" class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Nguyễn Văn D</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/phanthanhhai.jpg" alt=""
+                                    class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Nguyễn Văn E</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/pmt.jpg" alt="" class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Tài</p>
+                            </div>
+                            <div class="Friend__body__item">
+                                <img src="images/tranbaminh.jpg" alt=""
+                                    class="friend__img ImageList__body__item icon--hover">
+                                <p class="">Không có tên</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="App__content__right mg-left-20">
+                    <div class="App__content__right__item">
+                        <div class="statusPersonal bd-bt p-10">
+                            <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                            <input type="text" class="write-status" placeholder="Hiền ơi, bạn đang nghĩ gì thế ?">
+                        </div>
+                        <div class="uploadStatus">
+                            <div class="uploadStatus__item">
+                                <i class="fas fa-video icon icon--red"></i>
+                                <span class="mg-left-10">Video trực tiếp</span>
+                            </div>
+                            <div class="uploadStatus__item">
+                                <i class="fas fa-images icon icon--green"></i>
+                                <span class="mg-left-10">Ảnh/Video</span>
+
+                            </div>
+                            <div class="uploadStatus__item">
+                                <i class="fas fa-flag icon icon--blue"></i>
+                                <span class="mg-left-10">Sự kiện trong đời</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="App__content__right__item mg-top-10">
+                        <div class="App__content__right__item__head bd__bottom bd-bottom">
+                            <h2 class="">Bài viết</h2>
+                            <div class="group__item">
+                                <span class="btn__item">
+                                    <i class="fas fa-sliders-h"></i> Bộ lọc
+                                </span>
+                                <span class="btn__item">
+                                    <i class="fas fa-cog"></i> Quản lý bài viết
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="App__content__right__item__head">
+                            <span class="btn__item">
+                                <i class="fas fa-bars"></i> Xem theo danh sách
+                            </span>
+                            <span class="btn__item">
+                                <i class="fas fa-th"></i> Chế độ xem lưới
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="container__center_item mg-top-10">
+                        <div class="p-10">
+                            <div class="statusPersonal__items">
+                                <div class="statusPersonal__item">
+                                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                    <div class="groupName">
+                                        <span class="groupName__item__name">Văn Hiền</span>
+                                        <div class="groupName_item__time">11 giờ <i
+                                                class="fas fa-globe-asia icon--s"></i></div>
+                                    </div>
+                                </div>
+                                <div class="statusPersonal__item">
+                                    <i class="fas fa-ellipsis-h icon--s"></i>
+                                </div>
+                            </div>
+
+                            <p class="statusText">Cực phẩmmmmmmmmmmmmmmmm</p>
+                            <div class="statusContent text-center mg-top-10">
+                                Người yêu tương lai ơi!!!!!!!!
+                            </div>
+                            <div class="interactive mg-top-10">
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        <i class="fas fa-thumbs-up icon--blue"></i>
+                                        <i class="fas fa-heart icon--red"></i>
+
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        10,5k
+                                    </div>
+                                </div>
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        20k
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        bình luận
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        1000
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        lượt chia sẽ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="interactiveBtn mg-top-10 bd-bt">
+                                <div class="interactiveBtn__item">
+                                    <i class="far fa-thumbs-up icon--md"></i>
+                                    <span>Thích</span>
+                                </div>
+                                <div id="" onclick="CommentClick()" class="interactiveBtn__item commentAction">
+                                    <i class="far fa-comment icon--md"></i>
+                                    <span>Bình luận</span>
+                                </div>
+                                <div class="interactiveBtn__item">
+                                    <i class="fas fa-share icon--md"></i>
+                                    <span>Chia sẽ</span>
+                                </div>
+                            </div>
+                            <div class="statusPersonal bd-bt p-10">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <input type="text" class="write-status" placeholder="Viết bình luận đi...">
+                            </div>
+                            <div id="" class="commentList hide comments bd-bt p-10  ">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <div class="comments__item mg-left-10">
+                                    <span class="name">Hien Ca</span>
+                                    <div class="comment__detail">Một mình anh trong đêm thâu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container__center_item mg-top-10">
+                        <div class="p-10">
+                            <div class="statusPersonal__items">
+                                <div class="statusPersonal__item">
+                                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                    <div class="groupName">
+                                        <span class="groupName__item__name">Văn Hiền</span>
+                                        <div class="groupName_item__time">11 giờ <i
+                                                class="fas fa-globe-asia icon--s"></i></div>
+                                    </div>
+                                </div>
+                                <div class="statusPersonal__item">
+                                    <i class="fas fa-ellipsis-h icon--s"></i>
+                                </div>
+                            </div>
+
+                            <p class="statusText">Song: Chờ em trong đêm</p>
+                            <p class="statusText">Singer: Châu Khải Phong</p>
+                            <div class="mg-top-10">
+                                <audio controls style="width:100%;">
+                                    <source src="audio/choemtrongdem.mp3">
+                                </audio>
+                            </div>
+
+                            <div class="interactive mg-top-10">
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        <i class="fas fa-thumbs-up icon--blue"></i>
+                                        <i class="fas fa-heart icon--red"></i>
+
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        10,5k
+                                    </div>
+                                </div>
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        20k
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        bình luận
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        1000
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        lượt chia sẽ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="interactiveBtn mg-top-10 bd-bt">
+                                <div class="interactiveBtn__item">
+                                    <i class="far fa-thumbs-up icon--md"></i>
+                                    <span>Thích</span>
+                                </div>
+                                <div id="" onclick="CommentClick()" class="interactiveBtn__item commentAction">
+                                    <i class="far fa-comment icon--md"></i>
+                                    <span>Bình luận</span>
+                                </div>
+                                <div class="interactiveBtn__item">
+                                    <i class="fas fa-share icon--md"></i>
+                                    <span>Chia sẽ</span>
+                                </div>
+                            </div>
+                            <div class="statusPersonal bd-bt p-10">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <input type="text" class="write-status" placeholder="Viết bình luận đi...">
+                            </div>
+                            <div id="" class="commentList hide comments bd-bt p-10  ">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <div class="comments__item mg-left-10">
+                                    <span class="name">Hien Ca</span>
+                                    <div class="comment__detail">Một mình anh trong đêm thâu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container__center_item mg-top-10">
+                        <div class="p-10">
+                            <div class="statusPersonal__items">
+                                <div class="statusPersonal__item">
+                                    <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                    <div class="groupName">
+                                        <span class="groupName__item__name">Văn Hiền</span>
+                                        <div class="groupName_item__time">11 giờ <i
+                                                class="fas fa-globe-asia icon--s"></i></div>
+                                    </div>
+                                </div>
+                                <div class="statusPersonal__item">
+                                    <i class="fas fa-ellipsis-h icon--s"></i>
+                                </div>
+                            </div>
+
+                            <p class="statusText">Cực phẩmmmmmmmmmmmmmmmm</p>
+                            <div class="statusContent text-center mg-top-10">
+                                <img src="images/iPhone-14-Pro-Max.png" alt="" style="width:100%;">
+                            </div>
+                            <div class="interactive mg-top-10">
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        <i class="fas fa-thumbs-up icon--blue"></i>
+                                        <i class="fas fa-heart icon--red"></i>
+
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        10,5k
+                                    </div>
+                                </div>
+                                <div class="groupInteraction">
+                                    <div class="groupInteraction__item">
+                                        20k
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        bình luận
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-10">
+                                        1000
+                                    </div>
+                                    <div class="groupInteraction__item mg-left-5">
+                                        lượt chia sẽ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="interactiveBtn mg-top-10 bd-bt">
+                                <div class="interactiveBtn__item">
+                                    <i class="far fa-thumbs-up icon--md"></i>
+                                    <span>Thích</span>
+                                </div>
+                                <div id="" onclick="CommentClick()" class="interactiveBtn__item commentAction">
+                                    <i class="far fa-comment icon--md"></i>
+                                    <span>Bình luận</span>
+                                </div>
+                                <div class="interactiveBtn__item">
+                                    <i class="fas fa-share icon--md"></i>
+                                    <span>Chia sẽ</span>
+                                </div>
+                            </div>
+                            <div class="statusPersonal bd-bt p-10">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <input type="text" class="write-status" placeholder="Viết bình luận đi...">
+                            </div>
+                            <div id="" class="commentList hide comments bd-bt p-10  ">
+                                <img src="images/nvhh.jpg" alt="" class="avatar-icon icon--hover">
+                                <div class="comments__item mg-left-10">
+                                    <span class="name">Hien Ca</span>
+                                    <div class="comment__detail">Một mình anh trong đêm thâu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    <script type="text/javascript" src="Javascript/index.js"></script>
+
+</body>
+
+</html>
